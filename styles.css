@@ -210,20 +210,27 @@ nav {
 }
 
 .section {
-    padding: 60px 20px;
-    max-width: 1100px;
+    padding: 60px 0px;
+    width: 1200px;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     color: #e0e0e0;
+    justify-content: space-evenly;
 }
 
 .services {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
     text-align: center;
+    justify-content: space-between;
+    width: 1100px;
+    flex-direction: row;
+}
+
+.service-box-content {
+    text-align: left;
+    width: 450px;
 }
 
 .service-box {
@@ -237,6 +244,15 @@ nav {
 
 .service-box:hover {
     transform: translateY(-5px);
+}
+
+.service-box-img {
+  background-image: url('./Images/faq.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 300px;
+  background-position: center right;
 }
 
 .testimonials {
@@ -410,4 +426,33 @@ footer {
     .popup-content {
         width: 80%
     }
+}
+
+
+.section-box-img-corp {
+  background-image: url('./Images/corporate.jpg');
+  background-repeat: no-repeat;
+  background-size: 120%;
+  width: 340px;
+  height: 230px;
+}
+
+.section-box-img-mine {
+  background-image: url('./Images/mining.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 340px;
+    height: 230px;
+}
+
+.section-box-img-trans {
+  background-image: url('./Images/transportation.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 340px;
+    height: 230px;
+}
+
+.section-box {
+  width: 30%;
 }
