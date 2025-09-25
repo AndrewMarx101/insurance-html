@@ -60,6 +60,8 @@ function setupNav() {
   });
 }
 
+
+
 // Preload pages (cached by browser)
 async function preloadPages(pages) {
   for (const page of pages) {
