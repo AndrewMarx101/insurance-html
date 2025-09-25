@@ -459,6 +459,29 @@ footer {
     height: 230px;
 }
 
+.section-box-img-custom {
+  background-image: url('./Images/mining.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 340px;
+    height: 230px;
+}
+
+.section-box-img-build {
+  background-image: url('./Images/corporate.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 340px;
+    height: 230px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* spacing between boxes */
+}
+
 .section-box {
-  width: 30%;
+  padding: 20px;
+  border-radius: 8px;
 }
