@@ -1,0 +1,13 @@
+Navigate to project file, and open cmd
+
+1. Get the status:
+git status
+
+2. Stage your changes:
+git add .
+
+3. Commit your changes:
+git commit -m "Describe what you changed"
+
+4. Push to GitHub:
+git push
