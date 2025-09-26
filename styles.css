@@ -437,43 +437,35 @@ footer {
 
 .section-box-img-corp {
   background-image: url('./Images/corporate.jpg');
-  background-repeat: no-repeat;
-  background-size: 120%;
-  width: 340px;
-  height: 230px;
 }
 
 .section-box-img-mine {
   background-image: url('./Images/mining.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 340px;
-    height: 230px;
 }
 
 .section-box-img-trans {
   background-image: url('./Images/transportation.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 340px;
-    height: 230px;
 }
 
 .section-box-img-custom {
   background-image: url('./Images/mining.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 340px;
-    height: 230px;
 }
 
 .section-box-img-build {
   background-image: url('./Images/corporate.jpg');
+}
+
+.section-box-img-build,
+.section-box-img-custom,
+.section-box-img-trans,
+.section-box-img-mine,
+.section-box-img-corp {
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 340px;
-    height: 230px;
+  width: 70%;
+  height: 440px;
 }
+
 
 .services-grid {
   display: grid;
@@ -488,5 +480,97 @@ footer {
 
 .section.about {
   display: flex;
-      flex-direction: column;
+  flex-direction: row;
+}
+
+.section.about.info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden; /* hides slides outside the view */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%; /* each slide takes full container width */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-box-img {
+  width: 90%;
+  max-width: 1000px;
+  height: 440px; /* your desired height */
+  background-size: cover; /* ensures it fills box nicely */
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background:transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.section.options h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+
+.section.options {
+  padding: 60px 0px;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.section-box-content {
+  width: 58%;
+}
+
+.section.about .section-box-img-corp,
+.section.about .section-box-img-mine, 
+.section.about .section-box-img-trans, 
+.section.about .section-box-img-custom, 
+.section.about .section-box-img-build {
+  background-size: 100%;
+  width: 100%;
+  height: 230px;
+}
+
+.section.about .section-box-content {
+  width: 100%;
 }

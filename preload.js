@@ -1,84 +1,129 @@
-// preload.js
-
 window.addEventListener("DOMContentLoaded", () => {
-  // Default page
-  const defaultPage = "landing.html";
+  // Start on the landing page
+  const defaultShell = "index.html";
+  const defaultContent = "landing.html";
 
-  // Load the default page into #app
-  loadPage(defaultPage);
+  // Preload pages cache
+  const pageCache = {};
 
-  // Set initial history state
-  history.replaceState({ page: defaultPage }, "", defaultPage);
+  // Load the initial page
+  loadPage(defaultContent).then(() => {
+    // Preload other pages once landing is ready
+    preloadPages(Object.keys(routes).filter(p => p !== defaultContent));
+  });
 
   // Setup navigation clicks
   setupNav();
 
-  // Preload other pages
-  preloadPages([
-    "landing.html",
-    "longTerm.html",
-    "shortTerm.html",
-    "contact.html",
-    "about.html",
-    "faq.html"
-  ]);
+  // Handle refresh / direct URL
+   const currentPath = window.location.pathname.split("/").pop();
+  if (currentPath && currentPath !== "" && currentPath !== "index.html") {
+    // If user reloads on another page, load it instead of landing.html
+    loadPage(currentPath);
+  }
 });
 
+// Route → file map
+const routes = {
+  "landing.html": "landing.html",
+  "commercial.html": "commercial.html",
+  "shortTerm.html": "shortTerm.html",
+  "contact.html": "contact.html",
+  "about.html": "about.html",
+  "faq.html": "faq.html"
+};
+
+// In-memory cache for pages
+const pageCache = {};
+
 // Fetch and inject page into #app
-async function loadPage(url) {
+async function loadPage(file) {
+  // If already cached, use it
+  if (pageCache[file]) {
+    document.getElementById("app").innerHTML = pageCache[file];
+    initPageScripts();
+    return;
+  }
+
   try {
-    const res = await fetch(url);
+    const res = await fetch(file);
+    if (!res.ok) throw new Error(`Failed to fetch ${file}`);
     const html = await res.text();
     document.getElementById("app").innerHTML = html;
 
-    // Bind all page-specific scripts to the newly loaded content
+    // Cache it
+    pageCache[file] = html;
+
+    // Bind page scripts
     initPageScripts();
 
+    // Preload other pages
+    // preloadPages(Object.keys(routes).filter(p => p !== file && !pageCache[p]));
   } catch (err) {
     document.getElementById("app").innerHTML = "<p>Error loading page.</p>";
     console.error("Page load error:", err);
   }
 }
 
-
-// Handle nav clicks
+// Setup navigation clicks
 function setupNav() {
   document.querySelectorAll("#navMenu a").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
-      const page = link.getAttribute("href");
-      loadPage(page);
-      history.pushState({ page }, "", page); // updates URL without reload
+      const file = link.getAttribute("href"); // e.g., "about.html"
+      history.pushState({ page: file }, "", file);
+      loadPage(file);
     });
   });
 
   // Handle browser back/forward
   window.addEventListener("popstate", e => {
-    if (e.state && e.state.page) {
-      loadPage(e.state.page);
-    }
+    loadPage(e.state?.page || "landing.html");
   });
 }
 
-
-
-// Preload pages (cached by browser)
+// Preload pages (cached in memory)
 async function preloadPages(pages) {
   for (const page of pages) {
-    fetch(page);
+    if (!pageCache[page]) {
+      try {
+        const res = await fetch(page);
+        if (res.ok) {
+          pageCache[page] = await res.text();
+        }
+      } catch (err) {
+        console.warn("Preload failed:", page);
+      }
+    }
   }
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Page-specific behaviors
 function initPageScripts() {
   // FAQ toggle
   document.querySelectorAll(".faq-question").forEach(button => {
     button.addEventListener("click", () => {
-      const item = button.parentElement;
-      item.classList.toggle("active");
+      button.parentElement.classList.toggle("active");
     });
   });
+
+}
+
 
   // Hero button
   const quoteBtn = document.querySelector(".hero .btn-primary");
@@ -161,9 +206,32 @@ function initPageScripts() {
       }
     });
   }
+
+
+
+
+let index = 0;
+function showSlide(i) {
+
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");  
+
+  index = (i + slides.length) % slides.length; // loop around
+  slider.style.transform = `translateX(-${index * 100}%)`;
+
 }
 
+function Prev()
+{
+  showSlide(index - 1)
+}
 
+function Next()
+{
+  showSlide(index + 1)
+}
 
 
 
