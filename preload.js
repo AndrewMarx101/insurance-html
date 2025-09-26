@@ -135,25 +135,105 @@ function initPageScripts() {
   }
 
   // Popup
-  const popup = document.getElementById("quotePopup");
-  const openBtn = document.querySelector(".cta .btn-primary");
-  const closeBtn = document.querySelector(".close-btn");
-  if (popup && openBtn && closeBtn) {
-    openBtn.addEventListener("click", e => {
-      e.preventDefault();
-      popup.style.display = "flex";
-    });
+function LoadPopup(showText) {
+    console.log("hot");
 
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
+    // Remove existing popup if it exists
+    const existingPopup = document.getElementById("quotePopup");
+    if (existingPopup) existingPopup.remove();
 
+    // Create the popup HTML dynamically
+    const popup = document.createElement("div");
+    popup.id = "quotePopup";
+    popup.className = "popup-overlay";
+    popup.style.display = "flex"; // ✅ show immediately
+    popup.innerHTML = `
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>` + showText + `</h2>
+            <form id="quoteForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required autocomplete="additional-name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required autocomplete="additional-email">
+
+                <label for="insurance">Insurance Type</label>
+                <select id="insurance" name="insurance" required>
+                    <option value="">Select...</option>
+                    <option value="short-term">Short-Term Insurance</option>
+                    <option value="commercial">Commercial Insurance</option>
+                </select>
+
+                <label for="details">Additional Details</label>
+                <textarea id="details" name="details" rows="4"></textarea>
+
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+    `;
+
+    // Append popup to body
+    document.body.appendChild(popup);
+
+    const closeBtn = popup.querySelector(".close-btn");
+    const quoteForm = popup.querySelector("#quoteForm");
+
+    // Close popup
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            popup.remove(); // remove from DOM instead of hiding
+        });
+    }
+
+    // Close when clicking outside
     window.addEventListener("click", e => {
-      if (e.target === popup) {
-        popup.style.display = "none";
-      }
+        if (e.target === popup) popup.remove();
     });
-  }
+
+    // Handle form submission
+    if (quoteForm) {
+        quoteForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const formData = {
+                name: quoteForm.querySelector("#name").value,
+                email: quoteForm.querySelector("#email").value,
+                insuranceType: quoteForm.querySelector("#insurance").value,
+                details: quoteForm.querySelector("#details").value
+            };
+
+            if (!formData.name || !formData.email || !formData.insuranceType) {
+                alert("Please fill out all required fields.");
+                return;
+            }
+
+            try {
+                const response = await fetch("https://localhost:7233/api/quote", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.responseMessage || "Quote submitted successfully!");
+                    popup.remove();
+                    quoteForm.reset();
+                } else {
+                    alert(result.responseMessage || "Failed to submit quote.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Error sending request: " + err);
+            }
+        });
+    }
+}
+
+
+  
 
   // Hamburger
   const hamburger = document.getElementById("hamburger");

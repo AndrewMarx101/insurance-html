@@ -68,34 +68,8 @@
   <section class="cta">
     <h2>Ready to Protect What Matters Most?</h2>
     <p>Get a free quote today for long-term or short-term insurance options.</p>
-    <a href="#" class="btn-primary">Get a Quote</a>
+    <a class="btn-primary" onclick="LoadPopup('Get A Qoute Today');">Get a Quote</a>
   </section>
 
 
-<!-- Quote Popup -->
-<div id="quotePopup" class="popup-overlay">
-  <div class="popup-content">
-    <span class="close-btn">&times;</span>
-    <h2>Get Your Free Quote</h2>
-    <form id="quoteForm">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required autocomplete="additional-name">
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required autocomplete="additional-email">
-
-      <label for="insurance">Insurance Type</label>
-      <select id="insurance" name="insurance" required>
-        <option value="">Select...</option>
-        <option value="short-term">Short-Term Insurance</option>
-        <option value="long-term">Long-Term Insurance</option>
-      </select>
-
-      <label for="details">Additional Details</label>
-      <textarea id="details" name="details" rows="4"></textarea>
-
-      <button type="submit" class="btn-primary">Submit</button>
-    </form>
-  </div>
-</div>
 

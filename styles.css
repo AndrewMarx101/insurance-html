@@ -328,40 +328,41 @@ footer {
 
 
 /* Popup overlay */
+
 .popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: none; /* hidden by default */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* starts hidden */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6); /* semi-transparent background */
+    z-index: 9999;
 }
 
-/* Popup box */
+/* Popup content box */
 .popup-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  position: relative;
-  animation: fadeIn 0.3s ease;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: left;
+    position: relative;
 }
 
 /* Close button */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
+
 
 /* Form styling */
 .popup-content form {
@@ -462,10 +463,20 @@ footer {
 .section-box-img-corp {
   background-repeat: no-repeat;
   background-size: 100%;
+  width: 100%;
+  height: 235px;
+}
+
+section.options .section-box-img-build,
+section.options .section-box-img-custom,
+section.options .section-box-img-trans,
+section.options .section-box-img-mine,
+section.options .section-box-img-corp {
+  background-repeat: no-repeat;
+  background-size: 100%;
   width: 70%;
   height: 440px;
 }
-
 
 .services-grid {
   display: grid;
@@ -573,4 +584,64 @@ footer {
 
 .section.about .section-box-content {
   width: 100%;
+}
+
+
+.section.contact {
+      width: auto;
+    /* margin: auto; */
+    /* padding: 60px 20px; */
+    /* text-align: center; */
+    /* color: #333; */
+    font-family: Arial, sans-serif;
+    background-image: url(./Images/longterm-landing.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Headings */
+.contact-card-single {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  text-align: center;
+  background: #f5f8faeb;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+.contact-card-single h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Paragraph */
+.contact-card-single p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Contact info list */
+.contact-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contact-card-single {
+    padding: 30px 20px;
+  }
+  .contact-card-single h1 {
+    font-size: 1.6rem;
+  }
 }
