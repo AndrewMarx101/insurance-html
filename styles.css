@@ -473,6 +473,24 @@ footer {
     width: 100%;
   }
 
+  .section.about.info {
+    width: 100%;
+    padding: 10px;
+  }
+
+  section.options .section-box-img-build,
+  section.options .section-box-img-custom,
+  section.options .section-box-img-trans,
+  section.options .section-box-img-mine,
+  section.options .section-box-img-corp {
+    width: 90%;
+    height: 180px;
+  }
+
+  .section.options {
+    width: 50vh;
+  }
+
 
 }
 
