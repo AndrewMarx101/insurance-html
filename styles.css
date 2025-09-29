@@ -195,16 +195,16 @@ nav {
 }
 
 .hero.short-term {
-    background: url('./Images/commercial-landing.jpg');
+    background: url('./Images/commercial-landing.jpg') no-repeat center center;
 }
 
 .hero.long-term {
-    background: url('./Images/longTerm-landing.jpg');
+    background: url('./Images/longTerm-landing.jpg') no-repeat center center;
     
 }
 
 .hero.faq {
-    background: url('./Images/faq.jpg');
+    background: url('./Images/faq.jpg') no-repeat center center;
     
 }
 
