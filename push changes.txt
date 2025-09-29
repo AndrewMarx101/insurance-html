@@ -11,3 +11,21 @@ git commit -m "Describe what you changed"
 
 4. Push to GitHub:
 git push
+
+
+
+Color Schema:
+
+#dbdcdd
+#f0d98c
+#a67d21
+#272328
+#9ea0a2
+#383839
+#d4b55e
+#b5b3b0
+#b8993d
+#ab8529
+
+hosting
+

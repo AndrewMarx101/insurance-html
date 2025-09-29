@@ -19,7 +19,6 @@
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("quotePopup");
   const openBtn = document.querySelector(".cta .btn-primary");
