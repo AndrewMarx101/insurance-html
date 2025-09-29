@@ -169,6 +169,8 @@ nav {
   justify-content: center; /* vertical center */
   align-items: center;
   overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero::before {
@@ -190,21 +192,21 @@ nav {
 
 
 .hero.landing {
-    background: url('./Images/landing-background.webp') no-repeat center center;
+    background: url('./Images/landing-background.webp');
     
 }
 
 .hero.short-term {
-    background: url('./Images/commercial-landing.jpg') no-repeat center center;
+    background: url('./Images/commercial-landing.jpg');
 }
 
 .hero.long-term {
-    background: url('./Images/longTerm-landing.jpg') no-repeat center center;
+    background: url('./Images/longTerm-landing.jpg');
     
 }
 
 .hero.faq {
-    background: url('./Images/faq.jpg') no-repeat center center;
+    background: url('./Images/faq.jpg');
     
 }
 
