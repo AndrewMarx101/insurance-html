@@ -645,3 +645,8 @@ section.options .section-box-img-corp {
     font-size: 1.6rem;
   }
 }
+
+
+.section.faq {
+    flex-direction: column;
+}
