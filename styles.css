@@ -289,9 +289,9 @@ nav {
 
 .cta {
     text-align: center;
-    background: #1a1a1a;
-    color: #fff;
+    background: #9ea0a2;
     padding: 60px 20px;
+    color: #272328;
 }
 
 .cta .btn-primary {
@@ -300,7 +300,7 @@ nav {
 }
 
 footer {
-    background: #0d0d0d;
+    background: #383839;
     color: #aaa;
     text-align: center;
     padding: 20px;
@@ -365,6 +365,7 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     text-align: left;
     position: relative;
+    color: #272328;
 }
 
 /* Close button */
@@ -611,13 +612,13 @@ section.options .section-box-img-corp {
 
 .section.options {
   padding: 60px 0px;
-    width: 1000px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    color: #272328;
-    justify-content: space-evenly;
-    text-align: center;
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: #272328;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .section-box-content {
