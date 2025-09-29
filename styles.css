@@ -159,15 +159,16 @@ nav {
 }
 
 .hero {
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    min-height: 670px;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+  position: relative; /* important: makes ::before relative to .hero */
+  background-size: cover; /* image always fills screen */
+  height: 100vh; /* full viewport height */
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -176,20 +177,20 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 730px;
-  background: rgba(0, 0, 0, 0.4); /* dark gray overlay */
+  height: 100%; /* match hero height */
+  background: rgba(0, 0, 0, 0.4); /* overlay */
   z-index: 1;
 }
 
-/* Make sure content sits above the overlay */
 .hero > * {
-  position: relative;
+  position: relative; /* keep content above overlay */
   z-index: 2;
-  width: 700px;
+  max-width: 700px; /* instead of fixed 700px */
 }
 
+
 .hero.landing {
-    background: url('./Images/landing-background.webp');
+    background: url('./Images/landing-background.webp') no-repeat center center;
     
 }
 
