@@ -310,7 +310,7 @@ footer {
 
 .faq-item {
     margin-bottom: 15px;
-    border: 1px solid #444;
+    border: 1px solid #9ea0a2;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -320,7 +320,7 @@ footer {
     text-align: left;
     padding: 15px;
     font-size: 1rem;
-    background: #1f1f1f;
+    background: #9ea0a2;
     border: none;
     cursor: pointer;
     font-weight: bold;
@@ -330,8 +330,8 @@ footer {
 .faq-answer {
     display: none;
     padding: 15px;
-    background: #2a2a2a;
-    color: #ddd;
+    background: #9ea0a2;
+    color: #fff;
 }
 
 .faq-item.active .faq-answer {
