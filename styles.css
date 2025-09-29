@@ -1,3 +1,13 @@
+#dbdcdd
+#f0d98c
+#a67d21
+#272328
+#9ea0a2
+#383839
+#d4b55e
+#b5b3b0
+#b8993d
+#ab8529
 
 * {
     user-select: none;
@@ -7,12 +17,12 @@ body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, sans-serif;
     line-height: 1.6;
-    color: #121212; /* lighter text for dark theme */
-    background: #121212; /* dark background */
+    color: #dbdcdd; /* lighter text for dark theme */
+    background: #dbdcdd; /* dark background */
 }
 
 header {
-    background: #1a1a1a; /* dark gray/black */
+    background: #383839; /* dark gray/black */
     color: #fff;
     padding: 15px 15px;
     display: flex;
@@ -224,7 +234,7 @@ nav {
     margin: auto;
     display: flex;
     flex-direction: row;
-    color: #e0e0e0;
+    color: #272328;
     justify-content: space-evenly;
 }
 
@@ -473,30 +483,13 @@ footer {
     width: 100%;
   }
 
-  .section.about.info {
-    width: 100%;
-    padding: 10px;
-  }
-
-  section.options .section-box-img-build,
-  section.options .section-box-img-custom,
-  section.options .section-box-img-trans,
-  section.options .section-box-img-mine,
-  section.options .section-box-img-corp {
-    width: 90%;
-    height: 180px;
-  }
-
-  .section.options {
-    width: 50vh;
-  }
-
 
 }
 
 
 .section-box-img-corp {
   background-image: url('./Images/corporate.jpg');
+  background-size: 118% !important;
 }
 
 .section-box-img-mine {
