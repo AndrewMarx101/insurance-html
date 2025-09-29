@@ -436,6 +436,40 @@ footer {
     .popup-content {
         width: 80%
     }
+
+    .section {
+    padding: 60px 0px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: #e0e0e0;
+    justify-content: space-evenly;
+  }
+
+  .services {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    text-align: center;
+    justify-content: space-between;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+  }
+
+  .service-box-content {
+    text-align: left;
+    width: unset !important;
+    padding-bottom: 30px;
+  }
+
+.section-box-content {
+    width: 100%;
+}
+
+
 }
 
 
