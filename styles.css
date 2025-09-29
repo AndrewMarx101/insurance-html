@@ -714,3 +714,8 @@ section.options .section-box-img-corp {
 .section.faq {
     flex-direction: column;
 }
+
+.section.shortTerm {
+    flex-direction: column;
+    
+}
