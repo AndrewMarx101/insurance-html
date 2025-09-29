@@ -160,7 +160,7 @@ nav {
 
 .hero {
   position: relative; /* important: makes ::before relative to .hero */
-  background-size: cover; /* image always fills screen */
+  background-size: cover !important; /* image always fills screen */
   height: 100vh; /* full viewport height */
   text-align: center;
   color: #fff;
