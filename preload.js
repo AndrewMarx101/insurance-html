@@ -290,28 +290,28 @@ function LoadPopup(showText) {
 
 
 
-let index = 0;
-function showSlide(i) {
+// let index = 0;
+// function showSlide(i) {
 
-  const slider = document.querySelector(".slider");
-  const slides = document.querySelectorAll(".slide");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");  
+//   const slider = document.querySelector(".slider");
+//   const slides = document.querySelectorAll(".slide");
+//   const prevBtn = document.querySelector(".prev");
+//   const nextBtn = document.querySelector(".next");  
 
-  index = (i + slides.length) % slides.length; // loop around
-  slider.style.transform = `translateX(-${index * 100}%)`;
+//   index = (i + slides.length) % slides.length; // loop around
+//   slider.style.transform = `translateX(-${index * 100}%)`;
 
-}
+// }
 
-function Prev()
-{
-  showSlide(index - 1)
-}
+// function Prev()
+// {
+//   showSlide(index - 1)
+// }
 
-function Next()
-{
-  showSlide(index + 1)
-}
+// function Next()
+// {
+//   showSlide(index + 1)
+// }
 
 
 
