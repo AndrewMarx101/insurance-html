@@ -780,6 +780,7 @@ section.options .section-box-img-corp {
 .section.shortTerm .container .img{
   background-repeat: no-repeat;
   background-size: 100%;
+  height: 360px;
 }
 
 
@@ -792,7 +793,7 @@ section.options .section-box-img-corp {
 }
 
 #personal {
-  background-image: url(./Images/personal-furniture.jpg)
+  background-image: url(./Images/injury.jpg)
 }
 
 #third-party {
