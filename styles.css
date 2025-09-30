@@ -179,6 +179,8 @@ nav {
     width: auto !important;
 }
 
+.section.contact .btn-primary {width: 100px !important;}
+
 .hero {
   position: relative; /* important: makes ::before relative to .hero */
   background-size: cover !important; /* image always fills screen */
@@ -662,27 +664,31 @@ section.options .section-box-img-corp {
 
 .section.contact {
       width: auto;
-    /* margin: auto; */
-    /* padding: 60px 20px; */
-    /* text-align: center; */
-    /* color: #333; */
-    font-family: Arial, sans-serif;
-    background-image: url(./Images/longterm-landing.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+      /* margin: auto; */
+      padding: 0px 20px;
+      /* text-align: center; */
+      /* color: #333; */
+      font-family: Arial, sans-serif;
+      background-image: url(./Images/longterm-landing.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100%;
 }
 
 /* Headings */
 .contact-card-single {
   max-width: 600px;
   margin: 60px auto;
-  padding: 40px 30px;
+  padding: 0px 30px 20px 30px;
   text-align: center;
   background: #f5f8faeb;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   font-family: Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Headings */
