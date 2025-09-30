@@ -254,6 +254,9 @@ nav {
     text-align: center;
     width: auto;
     flex-direction: row;
+}
+
+.services.scroll {
     gap: 10px;
     overflow: hidden;
     overflow-x: scroll;
