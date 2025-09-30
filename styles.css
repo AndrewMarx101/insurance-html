@@ -735,6 +735,7 @@ section.options .section-box-img-corp {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
+  flex-direction: column;
 }
 
 .section.shortTerm h2 {
