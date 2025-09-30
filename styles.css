@@ -350,6 +350,7 @@ footer {
     padding: 15px;
     background: #9ea0a2;
     color: #fff;
+    border-top: 1px solid;
 }
 
 .faq-item.active .faq-answer {
