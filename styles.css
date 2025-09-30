@@ -775,3 +775,38 @@ section.options .section-box-img-corp {
     grid-template-columns: 1fr; /* 1 column */
   }
 }
+
+
+.section.shortTerm .container .img{
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+#vehicle {
+  background-image: url(./Images/vehicle.jpg);
+}
+
+#house {
+  background-image: url(./Images/house.jpg)
+}
+
+#personal {
+  background-image: url(./Images/personal-furniture.jpg)
+}
+
+#third-party {
+  background-image: url(./Images/personal.jpg)
+}
+
+#fire {
+  background-image: url(./Images/fire.jpg)
+}
+
+#storm {
+  background-image: url(./Images/storm.jpg)
+}
+
+#furniture {
+  background-image: url(./Images/personal-furniture.jpg)
+}
