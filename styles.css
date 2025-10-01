@@ -534,8 +534,9 @@ footer {
 #corp, 
 .section-box-img-corp {
   background-image: url('./Images/body-corporate.jpg');
-  background-size: 118% !important;
+  background-size: 100% !important;
 }
+
 
 #mine,
 .section-box-img-mine  {
