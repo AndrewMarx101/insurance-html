@@ -276,6 +276,17 @@ nav {
     width: 450px;
 }
 
+
+.service-box h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.service-box ul {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
 .service-box {
     background: #fff;
     padding: 30px;
@@ -284,6 +295,8 @@ nav {
     transition: transform 0.2s ease;
     color: #121212;
     min-width: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-box:hover {
@@ -514,44 +527,44 @@ footer {
 }
 
 
-.section-box-img-corp {
+#corp {
   background-image: url('./Images/body-corporate.jpg');
   background-size: 118% !important;
 }
 
-.section-box-img-mine {
+#mine {
   background-image: url('./Images/mining.jpg');
 }
 
-.section-box-img-trans {
+#trans {
   background-image: url('./Images/transportation.jpg');
 }
 
-.section-box-img-custom {
+#custom {
   background-image: url('./Images/custom.jpg');
 }
 
-.section-box-img-build {
+#build {
   background-image: url('./Images/corporate.jpg');
   background-size: 118% !important;
 }
 
-.section-box-img-build,
-.section-box-img-custom,
-.section-box-img-trans,
-.section-box-img-mine,
-.section-box-img-corp {
+#build,
+#custom,
+#trans,
+#mine,
+#corp {
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   height: 235px;
 }
 
-section.options .section-box-img-build,
-section.options .section-box-img-custom,
-section.options .section-box-img-trans,
-section.options .section-box-img-mine,
-section.options .section-box-img-corp {
+section.options #build,
+section.options #custom,
+section.options #trans,
+section.options #mine,
+section.options #corp {
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -752,31 +765,14 @@ section.options .section-box-img-corp {
   margin-bottom: 40px;
 }
 
-.section.shortTerm .container {
+.section.shortTerm .container,
+.section.options.info .container{
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 20px;                             /* space between boxes */
 }
 
-.service-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  color: #121212;
-  display: flex;
-  flex-direction: column;
-}
 
-.service-box h3 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.service-box ul {
-  padding-left: 20px;
-  margin: 10px 0 0 0;
-}
 
 /* Responsive: stack boxes on smaller screens */
 @media (max-width: 768px) {
