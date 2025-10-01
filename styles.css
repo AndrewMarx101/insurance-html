@@ -1,4 +1,4 @@
-#dbdcdd
+/* #dbdcdd
 #f0d98c
 #a67d21
 #272328
@@ -7,7 +7,14 @@
 #d4b55e
 #b5b3b0
 #b8993d
-#ab8529
+#ab8529 */
+
+:root {
+  --brand-gold: #d4af37;
+  --brand-dark: #272328;
+  --neutral-light: #dbdcdd;
+}
+
 
 * {
     user-select: none;
@@ -18,7 +25,7 @@ body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     line-height: 1.6;
     color: #dbdcdd; /* lighter text for dark theme */
-    background: #dbdcdd; /* dark background */
+    background: var(--neutral-light);
 }
 
 header {
@@ -168,7 +175,7 @@ nav {
 }
 
 .btn-primary {
-    background: #d4af37; /* gold accent */
+    background: var(--brand-gold);
     color: #000; /* black text on gold */
     padding: 10px 20px;
     border: none;
