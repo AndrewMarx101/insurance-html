@@ -508,7 +508,7 @@ footer {
 
 
 .section-box-img-corp {
-  background-image: url('./Images/corporate.jpg');
+  background-image: url('./Images/body-corporate.jpg');
   background-size: 118% !important;
 }
 
@@ -788,28 +788,32 @@ section.options .section-box-img-corp {
 
 #vehicle {
   background-image: url(./Images/vehicle.jpg);
+  background-size: 120% !important;
+  background-position: center;
 }
 
 #house {
-  background-image: url(./Images/house.jpg)
+  background-image: url(./Images/house.jpg);
 }
 
 #personal {
-  background-image: url(./Images/injury.jpg)
+  background-image: url(./Images/injury.jpg);
+  background-size: 104% !important;
+  background-position: center;
 }
 
 #third-party {
-  background-image: url(./Images/personal.jpg)
+  background-image: url(./Images/personal.jpg);
 }
 
 #fire {
-  background-image: url(./Images/fire.jpg)
+  background-image: url(./Images/fire.jpg);
 }
 
 #storm {
-  background-image: url(./Images/storm.jpg)
+  background-image: url(./Images/storm.jpg);
 }
 
 #furniture {
-  background-image: url(./Images/personal-furniture.jpg)
+  background-image: url(./Images/personal-furniture.jpg);
 }
