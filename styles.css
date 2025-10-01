@@ -258,6 +258,10 @@ nav {
     justify-content: space-evenly;
 }
 
+.section.commercial {
+  flex-direction: column;
+}
+
 .services {
     display: flex;
     text-align: center;
@@ -556,7 +560,10 @@ footer {
 #custom,
 #trans,
 #mine,
-#corp {
+#corp,
+.section-box-img-corp,
+.section-box-img-mine,
+.section-box-img-trans  {
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
