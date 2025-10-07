@@ -118,13 +118,7 @@ header .logo {
     }
 
 /* small polish: reduce line size on small screens */
-@media (max-width: 980px) {
-    #navMenu a + a::before {
-        height: 18px;
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-}
+
 .hamburger {
     display: none;
     font-size: 28px;
@@ -141,62 +135,7 @@ header .logo {
 }
 
 /* responsive: on mobile, nav becomes column; make separators horizontal rules */
-@media (max-width: 768px) {
-    #navMenu {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        position: absolute;
-        top: 90px;
-        background: #1a1a1a;
-        padding: 10px;
-        right: 0px;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 90px;
-        right: 1px;
-        background: #1a1a1a;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        overflow: hidden;
-        
 
-        /* initially hidden */
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.35s ease;
-    }
-
-        #navMenu a {
-            padding: 7px 16px 7px 16px;
-            display: flex;
-            flex-direction: column;
-        }
-
-            /* horizontal separator instead of vertical */
-            #navMenu a + a::before {
-                width: 100%;
-                height: 1px;
-                background: rgba(255,255,255,0.06);
-                margin: 8px 0; /* spacing above/below the horizontal line */
-                display: block;
-            }
-
-            /* remove the separator before the CTA button on mobile too */
-            #navMenu a.btn-primary::before {
-                display: none;
-            }
-
-    /* show when active */
-    #navMenu.active {
-        max-height: 500px;
-        opacity: 1;
-        visibility: visible;
-    }
-
-}
 
 
 nav {
@@ -495,87 +434,7 @@ footer {
 
 
 /* mobile styles */
-@media screen and (max-width: 800px) {
-    nav {
-        display: none; /* hide menu by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* just below header */
-        right: 20px;
-        background: white;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
 
-        nav.show {
-            display: flex; /* show when toggled */
-        }
-
-    .hamburger {
-        display: block; /* show burger */
-        position: absolute;
-        right: 50px;
-    }
-
-    #nav-get-qoute {
-        display: none;
-    }
-
-    header nav a {
-        color: black;
-    }
-
-    .hero h1 {
-        padding: 20px !important;
-        font-size: 2rem;
-    }
-
-    .hero p {
-        padding: 0px 20px 20px 20px;
-        font-size: 1rem;
-    }
-
-    .popup-content {
-        width: 80%
-    }
-
-    .section {
-        padding: 10px 0px;
-        width: 88%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .services {
-        display: flex;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        text-align: center;
-        justify-content: space-between;
-        width: auto;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        padding: 20px;
-    }
-
-    .service-box-content {
-        text-align: left;
-        width: unset !important;
-        padding-bottom: 30px;
-    }
-
-    .section-box-content {
-        width: 100% !important;
-        text-align: center;
-    }
-
-    .service-box-img {
-        width: 100%;
-    }
-}
 
 
 #corp,
@@ -802,18 +661,6 @@ footer {
 
 
 
-/* Responsive */
-@media (max-width: 480px) {
-    .contact-card-single {
-        padding: 30px 20px;
-    }
-
-    .contact-card-single h1 {
-        font-size: 1.6rem;
-    }
-}
-
-
 .section.faq {
     flex-direction: column;
 }
@@ -836,35 +683,6 @@ footer {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
         gap: 20px; /* space between boxes */
     }
-
-
-
-/* Responsive: stack boxes on smaller screens */
-@media (max-width: 768px) {
-    .section.shortTerm .container {
-        grid-template-columns: 1fr; /* 1 column */
-    }
-
-    .section.shortTerm .container .img {
-    height: 170px !important;
-    }
-    .section.shortTerm .container,
-    .section.commercial .container {
-        grid-template-columns: repeat(1, 1fr); /* 2 columns */
-        
-    }
-
-    .section.commercial #build,
-    .section.commercial #custom,
-    .section.commercial #trans,
-    .section.commercial #mine,
-    .section.commercial #corp {
-        background-repeat: no-repeat;
-        background-size: 100%;
-        width: 100%;
-        height: 180px;
-    }
-}
 
 
 .section.shortTerm .container .img {
@@ -915,4 +733,196 @@ footer {
     background-image: url(./Images/home-mining.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+}
+
+/* =========================================================
+   📱 MOBILE & RESPONSIVE STYLING (Organized by Breakpoints)
+   ========================================================= */
+
+/* ====================== 980px ====================== */
+@media (max-width: 980px) {
+    /* Smaller nav separators */
+    #navMenu a + a::before {
+        height: 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+/* ====================== 800–768px ====================== */
+@media (max-width: 800px) {
+
+    /* ===== NAVIGATION ===== */
+    nav {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav.show {
+        display: flex; /* shown when toggled */
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 50px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    #nav-get-qoute {
+        display: none;
+    }
+
+    header nav a {
+        color: black;
+    }
+
+    /* ===== HERO ===== */
+    .hero h1 {
+        padding: 20px !important;
+        font-size: 2rem;
+    }
+
+    .hero p {
+        padding: 0px 20px 20px 20px;
+        font-size: 1rem;
+    }
+
+    /* ===== POPUP ===== */
+    .popup-content {
+        width: 80%;
+    }
+
+    /* ===== SECTION LAYOUT ===== */
+    .section {
+        padding: 10px 0px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+    }
+
+    .section.shortTerm .container,
+    .section.commercial .container {
+        grid-template-columns: 1fr; /* stack items */
+    }
+
+    .section.shortTerm .container .img {
+        height: 170px !important;
+    }
+
+    .section.commercial #build,
+    .section.commercial #custom,
+    .section.commercial #trans,
+    .section.commercial #mine,
+    .section.commercial #corp {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 180px;
+    }
+
+    /* ===== SERVICE BOXES ===== */
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .service-box-content {
+        text-align: left;
+        width: 100% !important;
+        padding-bottom: 30px;
+    }
+
+    .section-box-content {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .service-box-img {
+        width: 100%;
+    }
+}
+
+/* ====================== 768px ====================== */
+@media (max-width: 768px) {
+    /* ===== NAV MENU (modern dropdown style) ===== */
+    #navMenu {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 90px;
+        right: 1px;
+        background: #1a1a1a;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        overflow: hidden;
+        padding: 10px;
+
+        /* hidden by default */
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease;
+    }
+
+    /* show menu when active */
+    #navMenu.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #navMenu a {
+        padding: 7px 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* horizontal separators between links */
+    #navMenu a + a::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: rgba(255,255,255,0.06);
+        margin: 8px 0;
+    }
+
+    /* remove separator before CTA */
+    #navMenu a.btn-primary::before {
+        display: none;
+    }
+}
+
+/* ====================== 480px ====================== */
+@media (max-width: 480px) {
+    .contact-card-single {
+        padding: 30px 20px;
+    }
+
+    .contact-card-single h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
 }
