@@ -755,7 +755,11 @@ footer {
     .section.about {
     display: flex;
     flex-direction: column;
-}
+  }
+
+  header .logo {
+    width: 180px;
+  }
 }
 
 /* ====================== 800–768px ====================== */
