@@ -22,6 +22,7 @@
 
 main {
     padding-bottom: 0rem !important;
+    /* width: 100vw; */
 }
 
 body {
@@ -541,7 +542,7 @@ footer {
 
     .section {
         padding: 10px 0px;
-        width: 100%;
+        width: 88%;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -843,6 +844,10 @@ footer {
     .section.shortTerm .container {
         grid-template-columns: 1fr; /* 1 column */
     }
+
+    .section.shortTerm .container .img {
+    height: 170px !important;
+}
 }
 
 
