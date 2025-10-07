@@ -41,6 +41,7 @@ async function loadPage(file) {
   // If already cached, use it
   if (pageCache[file]) {
     document.getElementById("app").innerHTML = pageCache[file];
+     window.scrollTo({ top: 0, behavior: 'smooth' });
     initPageScripts();
     return;
   }
