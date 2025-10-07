@@ -88,7 +88,7 @@ header .logo {
 
 @media (max-width: 1200px) {
     #navMenu {
-        width: 800px;
+        width: 94vw;
     }
 }
 
@@ -139,14 +139,16 @@ header .logo {
         align-items: stretch;
         gap: 0;
         position: absolute;
-        top: 60px;
-        right: 20px;
+        top: 90px;
         background: #1a1a1a;
         padding: 10px;
+        right: 0px;
     }
 
         #navMenu a {
-            padding: 12px 16px;
+            padding: 7px 16px 7px 16px;
+            display: flex;
+            flex-direction: column;
         }
 
             /* horizontal separator instead of vertical */
@@ -480,6 +482,8 @@ footer {
 
     .hamburger {
         display: block; /* show burger */
+        position: absolute;
+        right: 50px;
     }
 
     #nav-get-qoute {
