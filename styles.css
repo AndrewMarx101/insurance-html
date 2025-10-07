@@ -55,7 +55,7 @@ header {
     }
 
 .logo {
-    background-image: url(../images/logo.png);
+    background-image: url(./Images/logo.png);
     background-repeat: no-repeat;
     height: 150px;
     width: 100%;
@@ -66,7 +66,7 @@ header {
 }
 
 header .logo {
-    background-image: url(../images/logo-no-bottom.png);
+    background-image: url(./Images/logo-no-bottom.png);
     background-repeat: no-repeat;
     height: 100%;
     width: 160px;
@@ -228,19 +228,19 @@ nav {
 
 
     .hero.landing {
-        background: url('../images/landing-background.webp');
+        background: url('./Images/landing-background.webp');
     }
 
     .hero.short-term {
-        background: url('../images/commercial-landing.jpg');
+        background: url('./Images/commercial-landing.jpg');
     }
 
     .hero.long-term {
-        background: url('../images/longTerm-landing.jpg');
+        background: url('./Images/longTerm-landing.jpg');
     }
 
     .hero.faq {
-        background: url('../images/faq.jpg');
+        background: url('./Images/faq.jpg');
     }
 
     .hero h1 {
@@ -312,7 +312,7 @@ nav {
     }
 
 .service-box-img {
-    background-image: url('../images/faq.jpg');
+    background-image: url('./Images/faq.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 500px;
@@ -542,27 +542,27 @@ footer {
 
 #corp,
 .section-box-img-corp {
-    background-image: url('../images/body-corporate.jpg');
+    background-image: url('./Images/body-corporate.jpg');
     background-size: 100% !important;
 }
 
 
 #mine,
 .section-box-img-mine {
-    background-image: url('../images/mining.jpg');
+    background-image: url('./Images/mining.jpg');
 }
 
 #trans,
 .section-box-img-trans {
-    background-image: url('../images/transportation.jpg');
+    background-image: url('./Images/transportation.jpg');
 }
 
 #custom {
-    background-image: url('../images/custom.jpg');
+    background-image: url('./Images/custom.jpg');
 }
 
 #build {
-    background-image: url('../images/corporate.jpg');
+    background-image: url('./Images/corporate.jpg');
     background-size: 118% !important;
 }
 
@@ -718,7 +718,7 @@ footer {
     /* text-align: center; */
     /* color: #333; */
     font-family: Arial, sans-serif;
-    background-image: url(../images/longterm-landing.jpg);
+    background-image: url(./Images/longterm-landing.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -817,35 +817,35 @@ footer {
 
 
 #vehicle {
-    background-image: url(../images/vehicle.jpg);
+    background-image: url(./Images/vehicle.jpg);
     background-size: 120% !important;
     background-position: center;
 }
 
 #house {
-    background-image: url(../images/house.jpg);
+    background-image: url(./Images/house.jpg);
 }
 
 #personal {
-    background-image: url(../images/injury.jpg);
+    background-image: url(./Images/injury.jpg);
     background-size: 104% !important;
     background-position: center;
 }
 
 #third-party {
-    background-image: url(../images/personal.jpg);
+    background-image: url(./Images/personal.jpg);
 }
 
 #fire {
-    background-image: url(../images/fire.jpg);
+    background-image: url(./Images/fire.jpg);
 }
 
 #storm {
-    background-image: url(../images/storm.jpg);
+    background-image: url(./Images/storm.jpg);
 }
 
 #furniture {
-    background-image: url(../images/personal-furniture.jpg);
+    background-image: url(./Images/personal-furniture.jpg);
 }
 .btn-primary:hover {
     color: black;
@@ -854,7 +854,7 @@ footer {
 }
 
 #home-mining {
-    background-image: url(../images/home-mining.jpg);
+    background-image: url(./Images/home-mining.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
