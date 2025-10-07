@@ -808,9 +808,9 @@ footer {
         padding: 30px 20px;
     }
 
-        .contact-card-single h1 {
-            font-size: 1.6rem;
-        }
+    .contact-card-single h1 {
+        font-size: 1.6rem;
+    }
 }
 
 
@@ -847,7 +847,23 @@ footer {
 
     .section.shortTerm .container .img {
     height: 170px !important;
-}
+    }
+    .section.shortTerm .container,
+    .section.commercial .container {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+        
+    }
+
+    .section.commercial #build,
+    .section.commercial #custom,
+    .section.commercial #trans,
+    .section.commercial #mine,
+    .section.commercial #corp {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 180px;
+    }
 }
 
 
