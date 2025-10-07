@@ -527,10 +527,12 @@ footer {
 
     .hero h1 {
         padding: 20px !important;
+        font-size: 2rem;
     }
 
     .hero p {
         padding: 0px 20px 20px 20px;
+        font-size: 1rem;
     }
 
     .popup-content {
@@ -538,12 +540,11 @@ footer {
     }
 
     .section {
-        padding: 60px 0px;
+        padding: 10px 0px;
         width: 100%;
         margin: auto;
         display: flex;
         flex-direction: column;
-        color: #e0e0e0;
         justify-content: space-evenly;
     }
 
@@ -566,7 +567,8 @@ footer {
     }
 
     .section-box-content {
-        width: 100%;
+        width: 100% !important;
+        text-align: center;
     }
 
     .service-box-img {
