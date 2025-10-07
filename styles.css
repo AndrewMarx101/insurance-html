@@ -747,6 +747,15 @@ footer {
         margin-right: 10px;
         margin-left: 10px;
     }
+
+    .section.contact {
+        background-size: 400%;
+    }
+
+    .section.about {
+    display: flex;
+    flex-direction: column;
+}
 }
 
 /* ====================== 800–768px ====================== */
