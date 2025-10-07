@@ -99,7 +99,21 @@ async function preloadPages(pages) {
 }
 
 
+const burger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
 
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('#navMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
 
 
 
@@ -235,14 +249,7 @@ function LoadPopup(showText) {
 
   
 
-  // Hamburger
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-    });
-  }
+
 
   // Form submission
   const quoteForm = document.getElementById("quoteForm");
