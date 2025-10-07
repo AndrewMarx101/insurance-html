@@ -86,13 +86,6 @@ header .logo {
     width: auto;
 }
 
-@media (max-width: 1200px) {
-    #navMenu {
-        width: 94vw;
-    }
-}
-
-
 /* base link styling */
 #navMenu a {
     display: flex;
@@ -131,6 +124,20 @@ header .logo {
         margin-left: 10px;
     }
 }
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+#navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
 /* responsive: on mobile, nav becomes column; make separators horizontal rules */
 @media (max-width: 768px) {
@@ -143,6 +150,22 @@ header .logo {
         background: #1a1a1a;
         padding: 10px;
         right: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 90px;
+        right: 1px;
+        background: #1a1a1a;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        overflow: hidden;
+        
+
+        /* initially hidden */
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s ease;
     }
 
         #navMenu a {
@@ -164,6 +187,14 @@ header .logo {
             #navMenu a.btn-primary::before {
                 display: none;
             }
+
+    /* show when active */
+    #navMenu.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+    }
+
 }
 
 
